@@ -43,20 +43,25 @@ Engineer Trainee | Xebia
 
 PROJECTS
 --------
-1. ResuMatch (AI Resume Analyzer)
+1. AI Podcast Summarizer
+   - Tech: Streamlit, Python, FastAPI, AI, Gemini API, Whisper, LangChain, Audio Processing
+   - Details: AI-powered web application that transcribes podcast audio and generates structured summaries using OpenAI Whisper and Google Gemini 2.0 Flash with Streamlit. Integrated YouTube API to extract and process audio content automatically.
+   - Live: https://huggingface.co/spaces/Manikanta1572/AIPodcastSummarizer
+
+2. ResuMatch (AI Resume Analyzer)
    - Tech: React, Python, FastAPI, Docker, Gemini API
    - Details: AI-powered tool that compares resumes with job descriptions.
    - Link: https://resumatchai.vercel.app
 
-2. Grievance Management Chatbot
+3. Grievance Management Chatbot
    - Tech: React, Python, FastAPI, PostgreSQL, GPT API
    - Details: Automates employee grievance handling using GPT models.
 
-3. Credence (Financial Management)
+4. Credence (Financial Management)
    - Tech: React, TypeScript, Spring Boot, PostgreSQL
    - Details: Expense tracking, budget planning, and financial analytics.
 
-4. E-Commerce Platform
+5. E-Commerce Platform
    - Tech: JSP, Servlets, MySQL, Java
    - Details: Online shopping platform with auth and order management.
 
@@ -70,3 +75,9 @@ ABOUT ME
 I am passionate about building secure and maintainable solutions in agile 
 environments. My expertise lies in modernizing legacy systems and 
 integrating AI capabilities into web applications.
+
+Currently, I am expanding my expertise in Artificial Intelligence, actively 
+learning and working with cutting-edge AI technologies including Google Gemini API, 
+OpenAI Whisper for audio transcription, LangChain for building AI applications, 
+and OpenAI GPT models. I am applying these skills to build innovative solutions 
+that combine traditional software engineering with intelligent automation.
