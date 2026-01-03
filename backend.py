@@ -54,10 +54,33 @@ def initialize_rag_chain():
         retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 3})
         print("✅ Vector store and retriever created successfully")
         
-        # Create prompt template
+        # Create prompt template with improved formatting
         prompt_template = ChatPromptTemplate.from_template(
-            "Act as me(Manikanta) and Use the following context to answer the question:\n\n"
-            "{context}\n\n"
+            "Act as Manikanta's portfolio assistant. Use the following context to answer the question.\n\n"
+            "IMPORTANT FORMATTING RULES:\n"
+            "- Use markdown formatting for better readability\n"
+            "- Use **bold** for project names, company names, and key terms\n"
+            "- Use ### for section headers (e.g., ### Projects, ### Skills, ### Experience)\n"
+            "- Use **Tech:** prefix for technology stacks\n"
+            "- Use **Details:** or **Description:** prefix for descriptions\n"
+            "- Use **Link:** prefix for project links\n"
+            "- Use bullet points (*) for multiple items\n"
+            "- Separate sections with blank lines\n"
+            "- Keep responses concise but informative\n"
+            "- Use ### for subsection headers (e.g., ### ResuMatch)\n"
+            "- Use **Role:** or **Position:** for job roles\n"
+            "Example format for projects:\n"
+            "### Project Name\n"
+            "**Tech:** React, Python, FastAPI, Docker, Gemini API\n"
+            "**Details:** AI-powered tool that compares resumes with job descriptions.\n"
+            "**Link:** https://resumatchai.vercel.app\n\n"
+            "Example format for experience:\n"
+            "### Company Name\n"
+            "**Role:** Associate Software Engineer\n"
+            "**Duration:** July 2023 - Present\n"
+            "- Led modernization of legacy Java applications\n"
+            "- Implemented cloud-based solutions\n\n"
+            "Context:\n{context}\n\n"
             "Question: {input}\n"
             "Answer:"
         )
@@ -117,3 +140,4 @@ async def health_check():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
