@@ -49,7 +49,7 @@ def initialize_rag_chain():
         print(f"✅ Loaded {len(documents)} documents")
         
         # Initialize embeddings and vectorstore
-        embeddings = GoogleGenerativeAIEmbeddings(model="text-embedding-004", api_key=api_key)
+        embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-2-preview", api_key=api_key)
         vectorstore = Chroma.from_documents(documents, embeddings)
         retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 3})
         print("✅ Vector store and retriever created successfully")
